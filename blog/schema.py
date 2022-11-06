@@ -32,4 +32,4 @@ class Query(graphene.ObjectType):
     author_by_username = graphene.Field(AuthorType, username=graphene.String())
     post_by_slug = graphene.Field(PostType, slug=graphene.String())
     posts_by_author = graphene.List(PostType, username=graphene.String())
-
+    posts_by_tag = graphene.List(PostType, tag=graphene.String())
