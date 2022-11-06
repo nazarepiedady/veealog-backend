@@ -7,3 +7,8 @@ from blog import models
 class UserType(DjangoObjectType):
     class Meta:
         model = get_user_model()
+
+
+class AuthorType(DjangoObjectType):
+    class Meta:
+        model = models.Profile
