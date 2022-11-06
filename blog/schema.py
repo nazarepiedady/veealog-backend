@@ -52,3 +52,10 @@ class Query(graphene.ObjectType):
             .select_related('author')
             .get(slug=slug)
         )
+
+    def resolve_posts_by_author(root, info, username):
+        return (
+            models.Post.objects.prefetch_related('tags')
+            .select_related('author')
+            .filter(author__user__username=username)
+        )
