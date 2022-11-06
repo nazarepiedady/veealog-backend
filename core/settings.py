@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'graphene_django',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
