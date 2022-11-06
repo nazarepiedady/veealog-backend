@@ -12,3 +12,8 @@ class UserType(DjangoObjectType):
 class AuthorType(DjangoObjectType):
     class Meta:
         model = models.Profile
+
+
+class PostType(DjangoObjectType):
+    class Meta:
+        model = models.Post
