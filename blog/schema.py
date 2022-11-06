@@ -29,3 +29,5 @@ import graphene
 
 class Query(graphene.ObjectType):
     all_posts = graphene.List(PostType)
+    author_by_username = graphene.Field(AuthorType, username=graphene.String())
+
