@@ -40,3 +40,8 @@ class Query(graphene.ObjectType):
             .select_related('author')
             .all()
         )
+
+    def resolve_author_by_username(root, info, username):
+        return models.Profile.objects.select_related('user').get(
+            user__username=username
+        )
