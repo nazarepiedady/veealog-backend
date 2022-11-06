@@ -22,3 +22,10 @@ class PostType(DjangoObjectType):
 class TagType(DjangoObjectType):
     class Meta:
         model = models.Tag
+
+
+import graphene
+
+
+class Query(graphene.ObjectType):
+    all_posts = graphene.List(PostType)
