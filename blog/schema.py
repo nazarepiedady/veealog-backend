@@ -33,3 +33,10 @@ class Query(graphene.ObjectType):
     post_by_slug = graphene.Field(PostType, slug=graphene.String())
     posts_by_author = graphene.List(PostType, username=graphene.String())
     posts_by_tag = graphene.List(PostType, tag=graphene.String())
+
+    def resolve_all_posts(root, info):
+        return (
+            models.Post.objects.prefetch_related('tags')
+            .select_related('author')
+            .all()
+        )
