@@ -17,3 +17,8 @@ class AuthorType(DjangoObjectType):
 class PostType(DjangoObjectType):
     class Meta:
         model = models.Post
+
+
+class TagType(DjangoObjectType):
+    class Meta:
+        model = models.Tag
