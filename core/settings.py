@@ -129,3 +129,7 @@ STATIC_URL = '/static/'
 GRAPHENE = {
     'SCHEMA': 'blog.schema.schema',
 }
+
+# Django CORS Headers Configuration
+
+CORS_ORIGIN_ALLOW_ALL = False
