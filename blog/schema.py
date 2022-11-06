@@ -31,4 +31,5 @@ class Query(graphene.ObjectType):
     all_posts = graphene.List(PostType)
     author_by_username = graphene.Field(AuthorType, username=graphene.String())
     post_by_slug = graphene.Field(PostType, slug=graphene.String())
+    posts_by_author = graphene.List(PostType, username=graphene.String())
 
