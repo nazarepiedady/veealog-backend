@@ -1,4 +1,4 @@
-django==3.1.7
+django==3.1.14
 graphene-django==2.14.0
 django-cors-headers==3.6.0
 
