@@ -49,5 +49,5 @@ class PostAdmin(admin.ModelAdmin):
             'subtitle'
         )
     }
-    data_hierarchy = 'publish_date'
+    date_hierarchy = 'publish_date'
     save_on_top = True
