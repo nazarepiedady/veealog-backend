@@ -29,7 +29,7 @@ class Post(models.Model):
     subtitle = models.CharField(max_length=255, blank=True)
     slug = models.SlugField(max_length=255, unique=True)
     body = models.TextField()
-    meta_decription = models.CharField(max_length=150, blank=True)
+    meta_description = models.CharField(max_length=150, blank=True)
     data_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
     publish_date = models.DateTimeField(blank=True, null=True)
